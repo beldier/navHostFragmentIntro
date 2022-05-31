@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_fragmentA_to_fragmentB"
             app:destination="@id/fragmentB" />
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentC"
+            app:destination="@id/fragmentC" />
     </fragment>
     <fragment
         android:id="@+id/fragmentB"
@@ -19,12 +22,19 @@
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" >
         <action
-            android:id="@+id/action_fragmentB_to_fragmentC"
-            app:destination="@id/fragmentC" />
+            android:id="@+id/action_fragmentB_to_fragmentA"
+            app:destination="@id/fragmentA" />
     </fragment>
     <fragment
         android:id="@+id/fragmentC"
         android:name="com.example.navhostfragmentdemo.FragmentC"
         android:label="fragment_c"
-        tools:layout="@layout/fragment_c" />
+        tools:layout="@layout/fragment_c" >
+        <argument
+            android:name="fragmentMessage"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA" />
+    </fragment>
 </navigation>

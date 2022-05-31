@@ -16,7 +16,9 @@ class FragmentB : Fragment() {
         val view = inflater.inflate(R.layout.fragment_b, container, false)
         val buttonB = view.findViewById<Button>(R.id.actionButton)
         buttonB?.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_fragmentB_to_fragmentC)
+            val message = " Hello there "
+            val action = FragmentBDirections.actionFragmentBToFragmentC(message)
+            Navigation.findNavController(view).navigate(action)
         }
         return view.rootView
     }
