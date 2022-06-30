@@ -18,6 +18,13 @@ class FragmentB : Fragment() {
         buttonB?.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(R.id.action_fragmentB_to_fragmentC)
         }
+
         return view.rootView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        activity?.actionBar?.setDisplayHomeAsUpEnabled(false)
+        activity?.actionBar?.setHomeButtonEnabled(false)
     }
 }

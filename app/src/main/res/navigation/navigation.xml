@@ -26,5 +26,15 @@
         android:id="@+id/fragmentC"
         android:name="com.example.navhostfragmentdemo.FragmentC"
         android:label="fragment_c"
-        tools:layout="@layout/fragment_c" />
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA"
+            app:popUpTo="@id/fragmentA"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.navhostfragmentdemo.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

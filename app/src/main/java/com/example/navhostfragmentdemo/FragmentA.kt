@@ -2,12 +2,12 @@ package com.example.navhostfragmentdemo
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 
 class FragmentA : Fragment() {
@@ -25,6 +25,21 @@ class FragmentA : Fragment() {
             val intent = Intent( activity, DataBindingActivity::class.java)
             startActivity(intent)
         }
+        setHasOptionsMenu(true)
         return view.rootView
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController() )
+                || super.onOptionsItemSelected(item)
+    }
+
 }
