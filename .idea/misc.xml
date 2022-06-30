@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/activity_base.xml" value="0.4466666666666667" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/activity_data_binding.xml" value="0.1" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/activity_destination.xml" value="0.37182971014492755" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/fragment_a.xml" value="0.37182971014492755" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/fragment_b.xml" value="0.37182971014492755" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/layout/fragment_c.xml" value="0.358695652173913" />
+        <entry key="..\:/learning/navHostFragmentIntro/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3723958333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

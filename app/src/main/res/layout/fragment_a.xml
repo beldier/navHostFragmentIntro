@@ -18,4 +18,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to fragment B" />
+
+    <Button
+        android:id="@+id/actionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Activity" />
+
+    <Button
+        android:id="@+id/actionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to data binding" />
 </LinearLayout>

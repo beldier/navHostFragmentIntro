@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModelCounter"
+            type="com.example.navhostfragmentdemo.CounterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".FragmentA">
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{String.valueOf(viewModelCounter.counter)}"
+            android:textColor="@color/black"
+            android:textSize="48dp"
+            tools:text="Contador" />
+
+        <TextView
+            android:id="@+id/multipleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Multiple of 2"
+            android:textColor="@color/black"
+            android:visibility="@{(viewModelCounter.counter % 2==0 &amp;&amp; viewModelCounter.counter % 4==0)? View.VISIBLE : View.INVISIBLE}"
+            android:textSize="48dp" />
+
+        <Button
+            android:id="@+id/counterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModelCounter.increment()}"
+            android:text="Click me" />
+
+    </LinearLayout>
+
+</layout>
